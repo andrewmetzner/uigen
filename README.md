@@ -49,12 +49,15 @@ Open [http://localhost:3000](http://localhost:3000)
 
 ## Features
 
-- AI-powered component generation using Claude
-- Live preview with hot reload
-- Virtual file system (no files written to disk)
-- Syntax highlighting and code editor
-- Component persistence for registered users
-- Export generated code
+- AI-powered component generation using Claude (Haiku 4.5)
+- Live preview rendered in a sandboxed iframe — no bundler or server required
+- Virtual file system — all generated files live in-memory, nothing written to disk
+- Multi-file support with inline file tree and Monaco code editor
+- String-replace based file patching for incremental edits
+- JWT-based auth with sign-up / sign-in / sign-out
+- Project persistence for registered users (SQLite via Prisma)
+- Anonymous mode — work without an account, session state preserved in sessionStorage
+- Cat-themed UI 🐱
 
 ## Tech Stack
 
