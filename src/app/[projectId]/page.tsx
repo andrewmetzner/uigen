@@ -1,6 +1,6 @@
 import { getUser } from "@/actions";
 import { getProject } from "@/actions/get-project";
-import { MainContent } from "@/app/main-content";
+import { MainContent } from "@/app/main-content-loader";
 import { redirect } from "next/navigation";
 
 interface PageProps {
