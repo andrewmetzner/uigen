@@ -1,12 +1,7 @@
 import { getUser } from "@/actions";
 import { getProject } from "@/actions/get-project";
-import dynamic from "next/dynamic";
+import { MainContent } from "@/app/main-content";
 import { redirect } from "next/navigation";
-
-const MainContent = dynamic(
-  async () => (await import("@/app/main-content")).MainContent,
-  { ssr: false }
-);
 
 interface PageProps {
   params: Promise<{ projectId: string }>;

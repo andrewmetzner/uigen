@@ -1,13 +1,8 @@
 import { getUser } from "@/actions";
 import { getProjects } from "@/actions/get-projects";
 import { createProject } from "@/actions/create-project";
-import dynamic from "next/dynamic";
+import { MainContent } from "./main-content";
 import { redirect } from "next/navigation";
-
-const MainContent = dynamic(
-  async () => (await import("./main-content")).MainContent,
-  { ssr: false }
-);
 
 export default async function Home() {
   const user = await getUser();
@@ -15,7 +10,7 @@ export default async function Home() {
   // If user is authenticated, redirect to their most recent project
   if (user) {
     const projects = await getProjects();
-    
+
     if (projects.length > 0) {
       redirect(`/${projects[0].id}`);
     }

@@ -27,7 +27,7 @@ export function ChatInterface() {
       {messages.length === 0 ? (
         <div className="flex-1 flex flex-col items-center justify-center px-4 text-center">
           <p className="text-foreground font-semibold text-lg mb-2">What shall we build today? 🐱</p>
-          <p className="text-muted-foreground text-sm max-w-sm">Describe a component and I'll generate it for you</p>
+          <p className="text-muted-foreground text-sm max-w-sm">Describe a component and I will generate it for you</p>
         </div>
       ) : (
         <ScrollArea ref={scrollAreaRef} className="flex-1 overflow-hidden">
